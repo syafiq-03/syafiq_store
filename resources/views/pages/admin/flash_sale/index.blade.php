@@ -39,9 +39,18 @@
                                         @endforeach
                                     </td>
                                     <td>
-                                        <a href="{{ route('admin.flash_sale.show', $flashSale->id) }}" class="btn btn-info">Detail</a> <!-- Tombol Detail -->
+                                        <!-- Tombol Detail -->
+                                        <a href="{{ route('admin.flash_sale.show', $flashSale->id) }}" class="btn btn-info">Detail</a>
+
+                                        <!-- Tombol Edit -->
                                         <a href="{{ route('admin.flash_sale.edit', $flashSale->id) }}" class="btn btn-warning">Edit</a>
-                                        <a href="#" class="btn btn-danger">Hapus</a>
+                                        
+                                        <!-- Tombol Hapus menggunakan form -->
+                                        <form action="{{ route('admin.flash_sale.delete', $flashSale->id) }}" method="POST" style="display:inline-block" onsubmit="return confirm('Apakah Anda yakin ingin menghapus flash sale ini?');">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger">Hapus</button>
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach

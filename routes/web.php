@@ -47,6 +47,8 @@ Route::group(['middleware' => 'admin'], function() {
     Route::get('/flash-sale/{id}', [FlashSaleController::class, 'show'])->name('admin.flash_sale.show');
     Route::get('/flash-sale/{id}/edit', [FlashSaleController::class, 'edit'])->name('admin.flash_sale.edit');
     Route::put('/flash-sale/update/{id}', [FlashSaleController::class, 'update'])->name('admin.flash_sale.update');
+    Route::delete('/flash-sale/{id}', [FlashSaleController::class, 'destroy'])->name('admin.flash_sale.delete');
+
     });
 
 // User Route 
