@@ -10,4 +10,10 @@ class Product extends Model
     protected $fillable = [
         'name', 'price', 'category', 'description', 'image'
     ];
+    public function flashSales()
+    {
+        return $this->belongsToMany(FlashSale::class, 'flash_sale_product')
+                    ->withPivot('discount_price')
+                    ->withTimestamps();
+    }
 }
