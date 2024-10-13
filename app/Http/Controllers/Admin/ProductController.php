@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\File;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Validator;
@@ -165,4 +166,15 @@ class ProductController extends Controller
         return view('pages.user.detail', compact('product'));
     }
     
+=======
+
+class ProductController extends Controller
+{
+public function index()
+{
+    $products = Product::all();
+
+    return view('pages.admin.product.index', compact('products'));
+}
+>>>>>>> 726849b5100a98f8d4a1dba7d931c8a697dfb10d
 }

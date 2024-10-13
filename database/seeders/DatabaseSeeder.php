@@ -32,10 +32,17 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Distributor::create([
+<<<<<<< HEAD
             'nama_distributor' => 'Syafiq', 
             'lokasi' => 'Bengkalis', 
             'kontak' => '082170618686',
             'email' => 'syafiq@gmail.com',
+=======
+            'nama_distributor' => 'syafiq', 
+            'lokasi' => 'kembung luar', 
+            'kontak' => '082170618686',
+            'email' => 'distributor@gmail.com',
+>>>>>>> 726849b5100a98f8d4a1dba7d931c8a697dfb10d
         ]);
     }
 }

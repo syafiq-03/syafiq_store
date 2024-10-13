@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+<<<<<<< HEAD
         Schema::create('distributors', function (Blueprint $table) {
             $table->id();
             $table->string('nama_distributor');
@@ -19,6 +20,19 @@ return new class extends Migration
             $table->string('email');
             $table->timestamps();
         });
+=======
+        // Cek apakah tabel 'distributors' sudah ada
+        if (!Schema::hasTable('distributors')) {
+            Schema::create('distributors', function (Blueprint $table) {
+                $table->id();
+                $table->string('nama_distributor');
+                $table->string('lokasi');
+                $table->string('kontak');
+                $table->string('email');
+                $table->timestamps();
+            });
+        }
+>>>>>>> 726849b5100a98f8d4a1dba7d931c8a697dfb10d
     }
 
     /**

@@ -3,14 +3,20 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+<<<<<<< HEAD
 use App\Models\Distributor;
 use Illuminate\Http\Request;
+=======
+use Illuminate\Http\Request;
+use App\Models\Distributor;
+>>>>>>> 726849b5100a98f8d4a1dba7d931c8a697dfb10d
 
 class DistributorController extends Controller
 {
     public function index()
     {
         $distributors = Distributor::all();
+<<<<<<< HEAD
         return view('pages.admin.distributor.index', compact('distributors'));
     }
 
@@ -75,3 +81,9 @@ class DistributorController extends Controller
         return view('pages.admin.distributor.detail', compact('distributor'));
     }
 }
+=======
+        
+        return view('pages.admin.distributor.index', compact('distributors'));
+    }
+}
+>>>>>>> 726849b5100a98f8d4a1dba7d931c8a697dfb10d

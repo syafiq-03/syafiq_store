@@ -19,7 +19,10 @@ return new class extends Migration
             $table->text('description');
             $table->string('image');
             $table->timestamps();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 726849b5100a98f8d4a1dba7d931c8a697dfb10d
         });
     }
 

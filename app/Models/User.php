@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+<<<<<<< HEAD
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -45,4 +46,17 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+=======
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class User extends Authenticatable
+{
+    protected $fillable = [
+        'name', 'email', 'password', 'point',
+    ];
+
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
+>>>>>>> 726849b5100a98f8d4a1dba7d931c8a697dfb10d
 }

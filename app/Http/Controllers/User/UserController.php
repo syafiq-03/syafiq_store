@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
+<<<<<<< HEAD
 use App\Models\User;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Http\Controllers\Controller;
@@ -79,3 +80,17 @@ class UserController extends Controller
         }
     }
 }
+=======
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use App\Models\Product;
+class UserController extends Controller
+{
+    public function index()
+    {
+        $products = Product ::all();
+
+        return view('pages.user.index', compact('products'));
+    }
+}
+>>>>>>> 726849b5100a98f8d4a1dba7d931c8a697dfb10d
